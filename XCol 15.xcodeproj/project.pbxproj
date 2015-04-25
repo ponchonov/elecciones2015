@@ -14,6 +14,33 @@
 		9740B3781AEBF005008A6DA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3771AEBF005008A6DA6 /* Images.xcassets */; };
 		9740B37B1AEBF005008A6DA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3791AEBF005008A6DA6 /* LaunchScreen.xib */; };
 		9740B3871AEBF005008A6DA6 /* XCol_15Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9740B3861AEBF005008A6DA6 /* XCol_15Tests.m */; };
+		9740B3911AEBF093008A6DA6 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3901AEBF093008A6DA6 /* splash.png */; };
+		9740B39B1AEBF555008A6DA6 /* barbasan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3931AEBF555008A6DA6 /* barbasan.jpg */; };
+		9740B39C1AEBF555008A6DA6 /* gallardo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3941AEBF555008A6DA6 /* gallardo.jpg */; };
+		9740B39D1AEBF555008A6DA6 /* galvan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3951AEBF555008A6DA6 /* galvan.jpg */; };
+		9740B39E1AEBF555008A6DA6 /* moran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3961AEBF555008A6DA6 /* moran.jpg */; };
+		9740B39F1AEBF555008A6DA6 /* munro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3971AEBF555008A6DA6 /* munro.jpg */; };
+		9740B3A01AEBF555008A6DA6 /* peralta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3981AEBF555008A6DA6 /* peralta.jpg */; };
+		9740B3A11AEBF555008A6DA6 /* preciado.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3991AEBF555008A6DA6 /* preciado.jpg */; };
+		9740B3A21AEBF555008A6DA6 /* zepeda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9740B39A1AEBF555008A6DA6 /* zepeda.jpg */; };
+		9740B3A51AEBF9C8008A6DA6 /* candidato.m in Sources */ = {isa = PBXBuildFile; fileRef = 9740B3A41AEBF9C8008A6DA6 /* candidato.m */; };
+		9740B3A81AEC0064008A6DA6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9740B3A71AEC0064008A6DA6 /* DetailViewController.m */; };
+		9740B3C41AEC16EF008A6DA6 /* biografiaBarbasan.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3B41AEC16EF008A6DA6 /* biografiaBarbasan.html */; };
+		9740B3C51AEC16EF008A6DA6 /* biografiaGallardo.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3B51AEC16EF008A6DA6 /* biografiaGallardo.html */; };
+		9740B3C61AEC16EF008A6DA6 /* biografiaGalvan.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3B61AEC16EF008A6DA6 /* biografiaGalvan.html */; };
+		9740B3C71AEC16EF008A6DA6 /* biografiaMoran.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3B71AEC16EF008A6DA6 /* biografiaMoran.html */; };
+		9740B3C81AEC16EF008A6DA6 /* biografiaMunro.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3B81AEC16EF008A6DA6 /* biografiaMunro.html */; };
+		9740B3C91AEC16EF008A6DA6 /* biografiaNacho.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3B91AEC16EF008A6DA6 /* biografiaNacho.html */; };
+		9740B3CA1AEC16EF008A6DA6 /* biografiaPreciado.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3BA1AEC16EF008A6DA6 /* biografiaPreciado.html */; };
+		9740B3CB1AEC16EF008A6DA6 /* biografiaZepeda.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3BB1AEC16EF008A6DA6 /* biografiaZepeda.html */; };
+		9740B3CC1AEC16EF008A6DA6 /* propuestaBarbasan.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3BC1AEC16EF008A6DA6 /* propuestaBarbasan.html */; };
+		9740B3CD1AEC16EF008A6DA6 /* propuestaGallardo.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3BD1AEC16EF008A6DA6 /* propuestaGallardo.html */; };
+		9740B3CE1AEC16EF008A6DA6 /* propuestaGalvan.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3BE1AEC16EF008A6DA6 /* propuestaGalvan.html */; };
+		9740B3CF1AEC16EF008A6DA6 /* propuestaMoran.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3BF1AEC16EF008A6DA6 /* propuestaMoran.html */; };
+		9740B3D01AEC16EF008A6DA6 /* propuestaMunro.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3C01AEC16EF008A6DA6 /* propuestaMunro.html */; };
+		9740B3D11AEC16EF008A6DA6 /* propuestaNacho.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3C11AEC16EF008A6DA6 /* propuestaNacho.html */; };
+		9740B3D21AEC16EF008A6DA6 /* propuestaPreciado.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3C21AEC16EF008A6DA6 /* propuestaPreciado.html */; };
+		9740B3D31AEC16EF008A6DA6 /* propuestaZepeda.html in Resources */ = {isa = PBXBuildFile; fileRef = 9740B3C31AEC16EF008A6DA6 /* propuestaZepeda.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +67,35 @@
 		9740B3801AEBF005008A6DA6 /* XCol 15Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCol 15Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9740B3851AEBF005008A6DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9740B3861AEBF005008A6DA6 /* XCol_15Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCol_15Tests.m; sourceTree = "<group>"; };
+		9740B3901AEBF093008A6DA6 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		9740B3931AEBF555008A6DA6 /* barbasan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbasan.jpg; sourceTree = "<group>"; };
+		9740B3941AEBF555008A6DA6 /* gallardo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gallardo.jpg; sourceTree = "<group>"; };
+		9740B3951AEBF555008A6DA6 /* galvan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galvan.jpg; sourceTree = "<group>"; };
+		9740B3961AEBF555008A6DA6 /* moran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moran.jpg; sourceTree = "<group>"; };
+		9740B3971AEBF555008A6DA6 /* munro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = munro.jpg; sourceTree = "<group>"; };
+		9740B3981AEBF555008A6DA6 /* peralta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peralta.jpg; sourceTree = "<group>"; };
+		9740B3991AEBF555008A6DA6 /* preciado.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preciado.jpg; sourceTree = "<group>"; };
+		9740B39A1AEBF555008A6DA6 /* zepeda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zepeda.jpg; sourceTree = "<group>"; };
+		9740B3A31AEBF9C8008A6DA6 /* candidato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = candidato.h; sourceTree = "<group>"; };
+		9740B3A41AEBF9C8008A6DA6 /* candidato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = candidato.m; sourceTree = "<group>"; };
+		9740B3A61AEC0064008A6DA6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9740B3A71AEC0064008A6DA6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9740B3B41AEC16EF008A6DA6 /* biografiaBarbasan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaBarbasan.html; sourceTree = "<group>"; };
+		9740B3B51AEC16EF008A6DA6 /* biografiaGallardo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaGallardo.html; sourceTree = "<group>"; };
+		9740B3B61AEC16EF008A6DA6 /* biografiaGalvan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaGalvan.html; sourceTree = "<group>"; };
+		9740B3B71AEC16EF008A6DA6 /* biografiaMoran.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaMoran.html; sourceTree = "<group>"; };
+		9740B3B81AEC16EF008A6DA6 /* biografiaMunro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaMunro.html; sourceTree = "<group>"; };
+		9740B3B91AEC16EF008A6DA6 /* biografiaNacho.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaNacho.html; sourceTree = "<group>"; };
+		9740B3BA1AEC16EF008A6DA6 /* biografiaPreciado.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaPreciado.html; sourceTree = "<group>"; };
+		9740B3BB1AEC16EF008A6DA6 /* biografiaZepeda.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biografiaZepeda.html; sourceTree = "<group>"; };
+		9740B3BC1AEC16EF008A6DA6 /* propuestaBarbasan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaBarbasan.html; sourceTree = "<group>"; };
+		9740B3BD1AEC16EF008A6DA6 /* propuestaGallardo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaGallardo.html; sourceTree = "<group>"; };
+		9740B3BE1AEC16EF008A6DA6 /* propuestaGalvan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaGalvan.html; sourceTree = "<group>"; };
+		9740B3BF1AEC16EF008A6DA6 /* propuestaMoran.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaMoran.html; sourceTree = "<group>"; };
+		9740B3C01AEC16EF008A6DA6 /* propuestaMunro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaMunro.html; sourceTree = "<group>"; };
+		9740B3C11AEC16EF008A6DA6 /* propuestaNacho.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaNacho.html; sourceTree = "<group>"; };
+		9740B3C21AEC16EF008A6DA6 /* propuestaPreciado.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaPreciado.html; sourceTree = "<group>"; };
+		9740B3C31AEC16EF008A6DA6 /* propuestaZepeda.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = propuestaZepeda.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +137,8 @@
 		9740B3691AEBF005008A6DA6 /* XCol 15 */ = {
 			isa = PBXGroup;
 			children = (
+				9740B3A91AEC00EC008A6DA6 /* html files */,
+				9740B3921AEBF09C008A6DA6 /* images */,
 				9740B36E1AEBF005008A6DA6 /* AppDelegate.h */,
 				9740B36F1AEBF005008A6DA6 /* AppDelegate.m */,
 				9740B3711AEBF005008A6DA6 /* ViewController.h */,
@@ -89,6 +147,10 @@
 				9740B3771AEBF005008A6DA6 /* Images.xcassets */,
 				9740B3791AEBF005008A6DA6 /* LaunchScreen.xib */,
 				9740B36A1AEBF005008A6DA6 /* Supporting Files */,
+				9740B3A31AEBF9C8008A6DA6 /* candidato.h */,
+				9740B3A41AEBF9C8008A6DA6 /* candidato.m */,
+				9740B3A61AEC0064008A6DA6 /* DetailViewController.h */,
+				9740B3A71AEC0064008A6DA6 /* DetailViewController.m */,
 			);
 			path = "XCol 15";
 			sourceTree = "<group>";
@@ -117,6 +179,45 @@
 				9740B3851AEBF005008A6DA6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9740B3921AEBF09C008A6DA6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9740B3931AEBF555008A6DA6 /* barbasan.jpg */,
+				9740B3941AEBF555008A6DA6 /* gallardo.jpg */,
+				9740B3951AEBF555008A6DA6 /* galvan.jpg */,
+				9740B3961AEBF555008A6DA6 /* moran.jpg */,
+				9740B3971AEBF555008A6DA6 /* munro.jpg */,
+				9740B3981AEBF555008A6DA6 /* peralta.jpg */,
+				9740B3991AEBF555008A6DA6 /* preciado.jpg */,
+				9740B39A1AEBF555008A6DA6 /* zepeda.jpg */,
+				9740B3901AEBF093008A6DA6 /* splash.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		9740B3A91AEC00EC008A6DA6 /* html files */ = {
+			isa = PBXGroup;
+			children = (
+				9740B3B41AEC16EF008A6DA6 /* biografiaBarbasan.html */,
+				9740B3B51AEC16EF008A6DA6 /* biografiaGallardo.html */,
+				9740B3B61AEC16EF008A6DA6 /* biografiaGalvan.html */,
+				9740B3B71AEC16EF008A6DA6 /* biografiaMoran.html */,
+				9740B3B81AEC16EF008A6DA6 /* biografiaMunro.html */,
+				9740B3B91AEC16EF008A6DA6 /* biografiaNacho.html */,
+				9740B3BA1AEC16EF008A6DA6 /* biografiaPreciado.html */,
+				9740B3BB1AEC16EF008A6DA6 /* biografiaZepeda.html */,
+				9740B3BC1AEC16EF008A6DA6 /* propuestaBarbasan.html */,
+				9740B3BD1AEC16EF008A6DA6 /* propuestaGallardo.html */,
+				9740B3BE1AEC16EF008A6DA6 /* propuestaGalvan.html */,
+				9740B3BF1AEC16EF008A6DA6 /* propuestaMoran.html */,
+				9740B3C01AEC16EF008A6DA6 /* propuestaMunro.html */,
+				9740B3C11AEC16EF008A6DA6 /* propuestaNacho.html */,
+				9740B3C21AEC16EF008A6DA6 /* propuestaPreciado.html */,
+				9740B3C31AEC16EF008A6DA6 /* propuestaZepeda.html */,
+			);
+			name = "html files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +300,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9740B39D1AEBF555008A6DA6 /* galvan.jpg in Resources */,
+				9740B3CA1AEC16EF008A6DA6 /* biografiaPreciado.html in Resources */,
+				9740B3911AEBF093008A6DA6 /* splash.png in Resources */,
+				9740B3CE1AEC16EF008A6DA6 /* propuestaGalvan.html in Resources */,
+				9740B3D01AEC16EF008A6DA6 /* propuestaMunro.html in Resources */,
+				9740B39F1AEBF555008A6DA6 /* munro.jpg in Resources */,
+				9740B3D11AEC16EF008A6DA6 /* propuestaNacho.html in Resources */,
+				9740B3CF1AEC16EF008A6DA6 /* propuestaMoran.html in Resources */,
 				9740B3761AEBF005008A6DA6 /* Main.storyboard in Resources */,
+				9740B3C61AEC16EF008A6DA6 /* biografiaGalvan.html in Resources */,
 				9740B37B1AEBF005008A6DA6 /* LaunchScreen.xib in Resources */,
+				9740B3CD1AEC16EF008A6DA6 /* propuestaGallardo.html in Resources */,
+				9740B3C51AEC16EF008A6DA6 /* biografiaGallardo.html in Resources */,
+				9740B3C81AEC16EF008A6DA6 /* biografiaMunro.html in Resources */,
+				9740B3C91AEC16EF008A6DA6 /* biografiaNacho.html in Resources */,
+				9740B3A01AEBF555008A6DA6 /* peralta.jpg in Resources */,
+				9740B3D31AEC16EF008A6DA6 /* propuestaZepeda.html in Resources */,
+				9740B3A21AEBF555008A6DA6 /* zepeda.jpg in Resources */,
+				9740B3CB1AEC16EF008A6DA6 /* biografiaZepeda.html in Resources */,
+				9740B3CC1AEC16EF008A6DA6 /* propuestaBarbasan.html in Resources */,
+				9740B3D21AEC16EF008A6DA6 /* propuestaPreciado.html in Resources */,
+				9740B3A11AEBF555008A6DA6 /* preciado.jpg in Resources */,
+				9740B39C1AEBF555008A6DA6 /* gallardo.jpg in Resources */,
+				9740B39E1AEBF555008A6DA6 /* moran.jpg in Resources */,
+				9740B3C41AEC16EF008A6DA6 /* biografiaBarbasan.html in Resources */,
 				9740B3781AEBF005008A6DA6 /* Images.xcassets in Resources */,
+				9740B39B1AEBF555008A6DA6 /* barbasan.jpg in Resources */,
+				9740B3C71AEC16EF008A6DA6 /* biografiaMoran.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9740B3A81AEC0064008A6DA6 /* DetailViewController.m in Sources */,
 				9740B3731AEBF005008A6DA6 /* ViewController.m in Sources */,
+				9740B3A51AEBF9C8008A6DA6 /* candidato.m in Sources */,
 				9740B3701AEBF005008A6DA6 /* AppDelegate.m in Sources */,
 				9740B36D1AEBF005008A6DA6 /* main.m in Sources */,
 			);
@@ -348,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "XCol 15/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "XCol 15/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
