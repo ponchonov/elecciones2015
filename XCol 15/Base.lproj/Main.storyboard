@@ -18,13 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZL-u0-fjI">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
-                                <state key="normal" title="Vota¡¡">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZL-u0-fjI">
+                                <rect key="frame" x="0.0" y="550" width="600" height="42"/>
+                                <state key="normal" title="Encuesta">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changueView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kJ5-cB-w9B"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L4d-hb-aeM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L4d-hb-aeM">
                                 <rect key="frame" x="0.0" y="64" width="600" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -32,21 +35,75 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="0.068317873540000004" blue="0.082226076819999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="L4d-hb-aeM" secondAttribute="bottom" constant="53" id="69S-KC-s9c"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="L4d-hb-aeM" secondAttribute="bottom" constant="58" id="4DJ-l2-KDM"/>
+                            <constraint firstItem="UZL-u0-fjI" firstAttribute="centerX" secondItem="L4d-hb-aeM" secondAttribute="centerX" id="56z-91-orA"/>
+                            <constraint firstItem="UZL-u0-fjI" firstAttribute="top" secondItem="L4d-hb-aeM" secondAttribute="bottom" constant="8" id="83q-t3-QrI"/>
                             <constraint firstItem="L4d-hb-aeM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NS3-bC-LrW"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UZL-u0-fjI" secondAttribute="bottom" constant="20" id="S52-Qc-MrQ"/>
                             <constraint firstItem="L4d-hb-aeM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ud5-Qo-YPt"/>
+                            <constraint firstItem="L4d-hb-aeM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="VrU-gw-iAC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L4d-hb-aeM" secondAttribute="trailing" constant="-16" id="XpF-lq-zfq"/>
+                            <constraint firstItem="UZL-u0-fjI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="486" id="Xux-rO-i2V"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UZL-u0-fjI" secondAttribute="bottom" constant="8" id="abr-yG-TRp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qlT-mc-y6M"/>
                     <connections>
                         <outlet property="candidatosTableView" destination="L4d-hb-aeM" id="yX5-Wd-Hyv"/>
                         <segue destination="rqV-J2-lNt" kind="push" identifier="showDetail" id="xyz-MH-NdE"/>
+                        <segue destination="gVo-H2-6yk" kind="push" identifier="segueToVoto" id="z8z-ei-Wto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192" y="337"/>
+        </scene>
+        <!--Vota View Controller-->
+        <scene sceneID="ICG-Tw-oCP">
+            <objects>
+                <viewController id="gVo-H2-6yk" customClass="VotaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cg3-xO-vlY"/>
+                        <viewControllerLayoutGuide type="bottom" id="T7s-MV-arU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QfB-Wc-rBP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTp-cE-iuN">
+                                <rect key="frame" x="277" y="545" width="46" height="30"/>
+                                <state key="normal" title="Votar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="votarAction:" destination="gVo-H2-6yk" eventType="touchUpInside" id="31D-OU-7mv"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3TJ-Jl-XdN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3TJ-Jl-XdN" secondAttribute="centerX" id="FtY-BF-lnf"/>
+                            <constraint firstItem="3TJ-Jl-XdN" firstAttribute="centerX" secondItem="XTp-cE-iuN" secondAttribute="centerX" id="Ifp-x2-Cen"/>
+                            <constraint firstItem="T7s-MV-arU" firstAttribute="top" secondItem="3TJ-Jl-XdN" secondAttribute="bottom" constant="83" id="R02-j1-x67"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3TJ-Jl-XdN" secondAttribute="trailing" constant="-16" id="SBq-7x-Q55"/>
+                            <constraint firstItem="3TJ-Jl-XdN" firstAttribute="leading" secondItem="QfB-Wc-rBP" secondAttribute="leadingMargin" constant="-16" id="bcE-eZ-gHS"/>
+                            <constraint firstItem="3TJ-Jl-XdN" firstAttribute="top" secondItem="Cg3-xO-vlY" secondAttribute="bottom" id="fPz-LU-d6c"/>
+                            <constraint firstItem="3TJ-Jl-XdN" firstAttribute="top" secondItem="Cg3-xO-vlY" secondAttribute="bottom" id="h2U-zh-osA"/>
+                            <constraint firstItem="3TJ-Jl-XdN" firstAttribute="top" secondItem="Cg3-xO-vlY" secondAttribute="bottom" id="i2e-jd-KYZ"/>
+                            <constraint firstItem="XTp-cE-iuN" firstAttribute="top" secondItem="3TJ-Jl-XdN" secondAttribute="bottom" constant="28" id="rOu-0j-hx7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nH9-Y5-imm"/>
+                    <connections>
+                        <outlet property="votosTableView" destination="3TJ-Jl-XdN" id="owt-sH-ELf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZE-Qm-8rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="1146"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="VSM-OZ-1oB">

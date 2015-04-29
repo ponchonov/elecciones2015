@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Candidato.h"
 #import "DetailViewController.h"
+#import "VotaViewController.h"
 
 @interface ViewController (){
     NSIndexPath *selectedIndexPath;
@@ -35,12 +36,6 @@
 }
 
 
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 70.0f;
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _candidatoPartido.count;
@@ -50,18 +45,22 @@
 {
     static NSString * identifier = @"CellImage";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+   // CustomCell *cell = [candidatosTableView dequeueReusableCellWithIdentifier:identifier];
+   /*if(!cell)
+   {
+       cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+   }*/
     
     candidato *detalle = _candidatoPartido[indexPath.row];
     
     cell.textLabel.text = detalle.name;
-    cell.detailTextLabel.text = detalle.partido;
-    
+    //cell.detailTextLabel.text = detalle.partido;
+   // cell.nameLabel.text = detalle.name;
     UIImage *img = [UIImage imageNamed:detalle.photoRoute];
-    
     [cell.imageView setImage:img];
-
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+    
+   // [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+   // [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
     
     return cell;
 }
@@ -71,9 +70,13 @@
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    DetailViewController *detailViewController = [segue destinationViewController];
-    detailViewController.candidat= _candidatoPartido[selectedIndexPath.row];
+    if ([segue.identifier isEqualToString:@"segueToVoto"]) {
+        VotaViewController *votaViewController = [segue destinationViewController];
+        votaViewController.candidatos = _candidatoPartido;
+    }else{
+        DetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.candidat= _candidatoPartido[selectedIndexPath.row];
+    }
 }
 
 -(void)llenar{
@@ -166,6 +169,10 @@
     }
 }
 
+- (IBAction)changueView:(id)sender {
+    
+    [self performSegueWithIdentifier:@"segueToVoto" sender:self];
+}
 
 
 @end
