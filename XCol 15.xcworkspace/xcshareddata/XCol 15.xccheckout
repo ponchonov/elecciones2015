@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A8EC2DDA-ACB7-4810-AE93-98E76CC2A9CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XCol 15</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4FCE083B665581F984A161B46F9AF5250B0D6C7E</key>
+		<string>github.com:ponchonov/elecciones2015.git</string>
+		<key>938671FF3DFA1B260E458BFD0B5536619B7C007B</key>
+		<string>https://github.com/Roberasd/Elecciones-Colima-2015</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XCol 15.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4FCE083B665581F984A161B46F9AF5250B0D6C7E</key>
+		<string>..</string>
+		<key>938671FF3DFA1B260E458BFD0B5536619B7C007B</key>
+		<string>../XCol%2015/Elecciones-Colima-2015</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ponchonov/elecciones2015.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4FCE083B665581F984A161B46F9AF5250B0D6C7E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>938671FF3DFA1B260E458BFD0B5536619B7C007B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Elecciones-Colima-2015</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4FCE083B665581F984A161B46F9AF5250B0D6C7E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XCol%2015</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "candidato.h"
+#import "Candidato.h"
 
 @interface VotaViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *votosTableView;

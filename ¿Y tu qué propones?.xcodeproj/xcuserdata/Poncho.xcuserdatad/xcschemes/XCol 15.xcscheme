@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9740B3661AEBF004008A6DA6"
-               BuildableName = "XCol 15.app"
-               BlueprintName = "XCol 15"
-               ReferencedContainer = "container:XCol 15.xcodeproj">
+               BuildableName = "&#xbf;Y tu que&#x301; propones?.app"
+               BlueprintName = "&#xbf;Y tu qu&#xe9; propones?"
+               ReferencedContainer = "container:&#xbf;Y tu que&#x301; propones?.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9740B37F1AEBF005008A6DA6"
-               BuildableName = "XCol 15Tests.xctest"
-               BlueprintName = "XCol 15Tests"
-               ReferencedContainer = "container:XCol 15.xcodeproj">
+               BuildableName = "&#xbf;Y tu que&#x301; propones?Tests.xctest"
+               BlueprintName = "&#xbf;Y tu que&#x301; propones?Tests"
+               ReferencedContainer = "container:&#xbf;Y tu que&#x301; propones?.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9740B37F1AEBF005008A6DA6"
-               BuildableName = "XCol 15Tests.xctest"
-               BlueprintName = "XCol 15Tests"
-               ReferencedContainer = "container:XCol 15.xcodeproj">
+               BuildableName = "&#xbf;Y tu que&#x301; propones?Tests.xctest"
+               BlueprintName = "&#xbf;Y tu que&#x301; propones?Tests"
+               ReferencedContainer = "container:&#xbf;Y tu que&#x301; propones?.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9740B3661AEBF004008A6DA6"
-            BuildableName = "XCol 15.app"
-            BlueprintName = "XCol 15"
-            ReferencedContainer = "container:XCol 15.xcodeproj">
+            BuildableName = "&#xbf;Y tu que&#x301; propones?.app"
+            BlueprintName = "&#xbf;Y tu qu&#xe9; propones?"
+            ReferencedContainer = "container:&#xbf;Y tu que&#x301; propones?.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9740B3661AEBF004008A6DA6"
-            BuildableName = "XCol 15.app"
-            BlueprintName = "XCol 15"
-            ReferencedContainer = "container:XCol 15.xcodeproj">
+            BuildableName = "&#xbf;Y tu que&#x301; propones?.app"
+            BlueprintName = "&#xbf;Y tu qu&#xe9; propones?"
+            ReferencedContainer = "container:&#xbf;Y tu que&#x301; propones?.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9740B3661AEBF004008A6DA6"
-            BuildableName = "XCol 15.app"
-            BlueprintName = "XCol 15"
-            ReferencedContainer = "container:XCol 15.xcodeproj">
+            BuildableName = "&#xbf;Y tu que&#x301; propones?.app"
+            BlueprintName = "&#xbf;Y tu qu&#xe9; propones?"
+            ReferencedContainer = "container:&#xbf;Y tu que&#x301; propones?.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

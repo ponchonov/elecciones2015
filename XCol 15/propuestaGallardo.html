@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Document</title>
+            <style type="text/css">
+                .title{
+                    border:solid #6699FF 0.5px;
+                    text-align: center;
+                    font-size: 1.8em;
+                    
+                }
+            .contenido{
+                text-align: justify;
+                
+            }
+            #uno{
+                background-color:#FF7FCF;
+            }
+            #dos{
+                background-color:#F4426E;
+            }
+            #tres{
+                background-color:#FF7E89;
+            }
+            #cuatro{
+                background-color:#FFA985;
+            }
+            #cinco{
+                background-color:#DAAC88;
+            }
+            #seis{
+                background-color:#F5F5AB;
+            }
+            #siete{
+                background-color:#8FECA0;
+            }
+            #ocho{
+                background-color:#88E5BE;
+            }
+            #nueve{
+                background-color:#47D5FB;
+            }
+            #diez{
+                background-color:#7EABF9;
+            }
+            #once{
+                background-color:#BF93E1;
+            }
+            #doce{
+                background-color:#453865;
+                color:white;
+            }
+            
+                </style>
+            </head>
+    <body>
+        
+        <script type="text/javascript">
+            function capa(content){
+                
+                document.getElementById(content.id).style.display = (document.getElementById(content.id).style.display=="none")?'block':'none';
+                
+                
+            }
+        </script>
+        <div id="uno"class="title" href="#" onclick="capa(salud)">Salud</div>
+        <div class="contenido"id="salud" style="display: none;">
+        </div>
+        <div id="dos"class="title" href="#" onclick="capa(vivienda)">Vivienda</div>
+        <div class="contenido"id="vivienda" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="tres"class="title" href="#" onclick="capa(sociedad)">Sociedad</div>
+        <div class="contenido"id="sociedad" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="cuatro"class="title" href="#" onclick="capa(institu)">Institucionalidad</div>
+        <div class="contenido"id="institu" style="display: none;">
+            <strong>Autonomía a la Comision de Derechos Humanos</strong><br />
+            
+            Brindarle una verdadera autonomía a la Comisión de Derechos Humanos del Estado de Colima (CDHEC).
+        </div>
+        <div id="cinco" class="title" href="#" onclick="capa(urbano)">Planeamiento Urbano</div>
+        <div class="contenido"id="urbano" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="seis"class="title" href="#" onclick="capa(seguridad)">Seguridad</div>
+        <div class="contenido"id="seguridad" style="display: none;">
+            Buscar el respeto de las autonomías comunitarias, la cuales son la base para restablecer la seguridad. No se trata de tener más policías o cárceles sino de hacer una sociedad organizada con base al respeto a los derechos humanos.
+        </div>
+        <div id="siete"class="title" href="#" onclick="capa(medio)">Medio Ambiente</div>
+        <div class="contenido"id="medio" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="ocho"class="title" href="#" onclick="capa(eco)">Economía</div>
+        <div class="contenido"id="eco" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="nueve"class="title" href="#" onclick="capa(inter)">Asuntos Internacionales</div>
+        <div class="contenido"id="inter" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="diez"class="title" href="#" onclick="capa(educacion)">Educación</div>
+        <div class="contenido"id="educacion" style="display: none;">
+            <strong> Escuelas de tiempo completo</strong><br />
+            Impulsar las escuelas de tiempo completo, así como una educación cívica en el estado.
+        </div>
+        <div id="once"class="title" href="#" onclick="capa(transporte)">Transporte</div>
+        <div class="contenido"id="transporte" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+        <div id="doce"class="title" href="#" onclick="capa(humanos)">Derechos Humanos</div>
+        <div class="contenido"id="humanos" style="display: none;">
+            <strong>No tiene propuestas!</strong><br />
+        </div>
+    </body>
+</html>

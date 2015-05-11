@@ -10,21 +10,28 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #define kSITIO_WEB "www.google.com"
+#import <JGProgressHUD.h>
 
 @interface VotaViewController ()
-@property NSMutableArray *candidatoPartido;
 @property NSIndexPath *indexP;
+@property NSString *datosGuardados;
+@property (nonatomic, strong) JGProgressHUD * progressHud;
 @end
 
 @implementation VotaViewController
-@synthesize votosTableView,candidatos,buttonForVote;
+@synthesize votosTableView,candidatos;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     votosTableView.dataSource = self;
     votosTableView.delegate= self;
     self.title = @"Por quién Votarías?";
-    
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _datosGuardados = [defaults objectForKey:@"dataSaved"];
+    NSLog(@"los datos guardados son: %@",_datosGuardados);
+    //ProgressHud definition
+    _progressHud = [JGProgressHUD progressHUDWithStyle:(JGProgressHUDStyleDark)];
+    [[_progressHud textLabel] setText:@"Registrando"];
     // Do any additional setup after loading the view.
 }
 
@@ -33,6 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Data for the tableView
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -48,9 +56,8 @@
 {
     static NSString * identifier = @"CellImage";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    candidato *detalle = candidatos[indexPath.row];
+    Candidato *detalle = candidatos[indexPath.row];
     cell.textLabel.text = detalle.name;
-    NSLog(@"UNO: %@ DOS: %@",indexPath,_indexP);
     if([indexPath isEqual:_indexP]){
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
@@ -66,7 +73,7 @@
     
 }
 - (IBAction)votarAction:(id)sender {
-    candidato *candidatoToVote = candidatos[_indexP.row];
+    Candidato *candidatoToVote = candidatos[_indexP.row];
     
     UIAlertView * alerta = [[UIAlertView alloc]
                             initWithTitle:@"Voto"
@@ -91,7 +98,9 @@
     {
         if([self conexion])
         {
+            [_progressHud showInView:[self view] animated:YES];
             [self sendDataforVoto];
+            
         }
         
     }
@@ -126,7 +135,7 @@
 {
     NSString *idDevice = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     NSString *idCandidate =[NSString stringWithFormat:@"%ld", (long)_indexP.row+1] ;
-    NSLog(@"%@",idCandidate);
+    NSLog(@"Id Device: %@",idDevice);
     // NSString *post = @"no_control=%@&password=PONCHOC";
     NSString *post = [NSString stringWithFormat:@"id_device=%@&id_candidate=%@&election=gobernador",idDevice,idCandidate];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -143,16 +152,35 @@
             NSError *JSONerror = nil;
             NSDictionary *JSONDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&JSONerror];
             
-              NSLog(@"%@", JSONDict);
-            if(JSONDict[@"status"]){
-                for(NSDictionary *user in JSONDict[@"status"]){
-                    NSLog(@"%@", user);
-                }
-                
+            NSLog(@"%@",JSONDict);
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                });
+            if(JSONDict[@"results"]){
+                [_progressHud dismissAnimated:YES];
+                if(JSONDict[@"results"][@"error"])
+                            {
+                                                     NSString *resultado =JSONDict[@"results"][@"error"];
+                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"error"
+                                                                                message:resultado
+                                                                               delegate:nil
+                                                                      cancelButtonTitle:@"OK"
+                                                                      otherButtonTitles:nil];
+                                [alert show];
+                            }
+                else{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Aviso"
+                                                                    message:@"Voto registrado correctamente"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                    [alert show];
+                }
+                [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"dataSaved"];
+               
+                 [self.navigationController popViewControllerAnimated:YES];
             }
+                });
+            });
         }
     }];
     

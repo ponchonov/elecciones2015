@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "candidato.h"
+#import "Candidato.h"
 
 @interface DetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIWebView *informationWebView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
-@property (nonatomic, strong) candidato *candidat;
+- (IBAction)changeView:(id)sender;
+@property (nonatomic, strong) NSArray *candidato;
+@property NSInteger selected;
 @end

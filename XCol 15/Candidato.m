@@ -7,7 +7,7 @@
 //
 
 
-#import "candidato.h"
-@implementation candidato
+#import "Candidato.h"
+@implementation Candidato : NSObject 
 
 @end
