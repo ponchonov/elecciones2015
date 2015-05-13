@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraphsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@protocol GraphsViewControllerDelegate;
 
+@interface GraphsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewcontroller;
 @property (nonatomic,strong) NSMutableArray *candidatos;
-- (IBAction)goBack:(id)sender;
+
+@property (nonatomic, assign) id<GraphsViewControllerDelegate> delegate;
+@end
+
+@protocol GraphsViewControllerDelegate <NSObject>
+@required
+- (void)graphsViewControllerDidRequestBeingClosed:(GraphsViewController *)viewController;
+
 @end

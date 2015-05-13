@@ -15,6 +15,7 @@
 @interface VotaViewController ()
 @property NSIndexPath *indexP;
 @property NSString *datosGuardados;
+@property (weak, nonatomic) IBOutlet UIButton *buttonVotar;
 @property (nonatomic, strong) JGProgressHUD * progressHud;
 @end
 
@@ -33,12 +34,32 @@
     _progressHud = [JGProgressHUD progressHUDWithStyle:(JGProgressHUDStyleDark)];
     [[_progressHud textLabel] setText:@"Registrando"];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.leftBarButtonItem = [self backButtonItem];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - Methods
+
+- (void)backButtonItemTapped
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(VotaViewControllerDidRequestBeingClosed:)]) {
+        [self.delegate VotaViewControllerDidRequestBeingClosed:self];
+    }
+}
+
+
+#pragma mark - Getters
+
+- (UIBarButtonItem *)backButtonItem
+{
+    return [[UIBarButtonItem alloc] initWithTitle:@"Cerrar" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonItemTapped)];
+}
+
 
 #pragma mark Data for the tableView
 
@@ -176,8 +197,9 @@
                     [alert show];
                 }
                 [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"dataSaved"];
-               
-                 [self.navigationController popViewControllerAnimated:YES];
+                
+                _buttonVotar.hidden = YES;
+                
             }
                 });
             });

@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.tableViewcontroller.dataSource = self;
     self.tableViewcontroller.delegate= self;
     //ProgressHud definition
@@ -29,9 +30,28 @@
     [[_progressHud textLabel] setText:@"Actualizando"];
     // Do any additional setup after loading the view.
     if([self conexion]){
-         [self downloadData];
+        [self downloadData];
     }
-   
+    
+    self.navigationItem.leftBarButtonItem = [self backButtonItem];
+}
+
+
+#pragma mark - Methods
+
+- (void)backButtonItemTapped
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(graphsViewControllerDidRequestBeingClosed:)]) {
+        [self.delegate graphsViewControllerDidRequestBeingClosed:self];
+    }
+}
+
+
+#pragma mark - Getters
+
+- (UIBarButtonItem *)backButtonItem
+{
+    return [[UIBarButtonItem alloc] initWithTitle:@"Cerrar" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonItemTapped)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,10 +82,6 @@
 }
 
 
-- (IBAction)goBack:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 -(void) downloadData{
     [_progressHud showInView:[self view] animated:YES];
     NSURL *url = [NSURL URLWithString:@"http://52.10.114.97/votaciones-api/index.php/get/gobernador"];
@@ -78,39 +94,39 @@
             NSError *JSONerror = nil;
             NSDictionary *JSONDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&JSONerror];
             
-                    if(JSONDict[@"percent"]){
-                        for(NSDictionary *candidato in JSONDict[@"percent"]){
-                
-                            Candidato *detalle2 =candidatos[[[candidato objectForKey:@"id_candidate"]integerValue]-1];
-                            Candidato *newCandidato = [Candidato new];
-                            newCandidato.name = detalle2.name;
-                            newCandidato.biografiaRoute = detalle2.biografiaRoute;
-                            newCandidato.propuestaRoute= detalle2.propuestaRoute;
-                            newCandidato.photoRoute =detalle2.photoRoute;
-                            newCandidato.partido= detalle2.partido;
-                            NSString *porcentaje=[NSString stringWithFormat:@"%@ ",[candidato objectForKey:@"percent"]];
-                            if(porcentaje.length > 4){
-                                porcentaje = [porcentaje substringToIndex:4];
-                            }
-                            porcentaje= [NSString stringWithFormat:@"%@ %@", porcentaje,@"%"];
-                            newCandidato.porcentaje = porcentaje;
-                            
-                            [candidatos replaceObjectAtIndex:[[candidato objectForKey:@"id_candidate"] integerValue]-1 withObject:newCandidato];
-                        }
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.tableViewcontroller reloadData];
-                                [_progressHud dismissAnimated:YES];
-                           
-                        });
-                        
-                        
+            if(JSONDict[@"percent"]){
+                for(NSDictionary *candidato in JSONDict[@"percent"]){
+                    
+                    Candidato *detalle2 =candidatos[[[candidato objectForKey:@"id_candidate"]integerValue]-1];
+                    Candidato *newCandidato = [Candidato new];
+                    newCandidato.name = detalle2.name;
+                    newCandidato.biografiaRoute = detalle2.biografiaRoute;
+                    newCandidato.propuestaRoute= detalle2.propuestaRoute;
+                    newCandidato.photoRoute =detalle2.photoRoute;
+                    newCandidato.partido= detalle2.partido;
+                    NSString *porcentaje=[NSString stringWithFormat:@"%@ ",[candidato objectForKey:@"percent"]];
+                    if(porcentaje.length > 4){
+                        porcentaje = [porcentaje substringToIndex:4];
                     }
-        
+                    porcentaje= [NSString stringWithFormat:@"%@ %@", porcentaje,@"%"];
+                    newCandidato.porcentaje = porcentaje;
+                    
+                    [candidatos replaceObjectAtIndex:[[candidato objectForKey:@"id_candidate"] integerValue]-1 withObject:newCandidato];
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableViewcontroller reloadData];
+                    [_progressHud dismissAnimated:YES];
+                    
+                });
+                
+                
+            }
+            
         }
     }];
     
     [dataTask resume];
-
+    
 }
 - (BOOL)conexion{
     SCNetworkReachabilityRef referencia = SCNetworkReachabilityCreateWithName (kCFAllocatorDefault, kSITIO_WEB);

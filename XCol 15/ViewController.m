@@ -12,7 +12,7 @@
 #import "VotaViewController.h"
 #import "GraphsViewController.h"
 
-@interface ViewController (){
+@interface ViewController () <GraphsViewControllerDelegate, VotaViewControllerDelegate>{
     NSIndexPath *selectedIndexPath;
     __weak IBOutlet UIButton *buttonAction;
 }
@@ -35,14 +35,11 @@
     candidatosTableView.delegate=self;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _datosGuardados = [defaults objectForKey:@"dataSaved"];
-    
     if([_datosGuardados isEqualToString:@"YES"]){
          [buttonAction setTitle:@"Resultados de nuestra encuesta" forState:UIControlStateNormal];
-    
     }
     else{
         [buttonAction setTitle:@"Participa en nuestra Encuesta" forState:UIControlStateNormal];
-    
     }
 }
 
@@ -98,22 +95,11 @@
     selectedIndexPath = indexPath;
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"segueToVoto"]) {
-        VotaViewController *votaViewController = [segue destinationViewController];
-        votaViewController.candidatos = _candidatoPartido;
-    }else{
-        if ([segue.identifier isEqualToString:@"segueToGraphs"]){
-            GraphsViewController *graphs =[segue destinationViewController];
-            graphs.candidatos = _candidatoPartido;
-            
-        }
-        else{
-            DetailViewController *detailViewController = [segue destinationViewController];
-            detailViewController.candidato= _candidatoPartido;
-            detailViewController.selected = selectedIndexPath.row;
-        }
-    }
+    DetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.candidato= _candidatoPartido;
+    detailViewController.selected = selectedIndexPath.row;
 }
 
 -(void)llenar{
@@ -217,17 +203,39 @@
 }
 
 - (IBAction)changueView:(id)sender {
+    UINavigationController *navController;
     
     if([_datosGuardados isEqualToString:@"YES"]){
-        [self performSegueWithIdentifier:@"segueToGraphs" sender:self];
-       
+        GraphsViewController *graphsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Graphs"];
+        graphsViewController.delegate = self;
+        graphsViewController.candidatos = _candidatoPartido;
+        navController = [[UINavigationController alloc] initWithRootViewController:graphsViewController];
     }
     else
     {
-            [self performSegueWithIdentifier:@"segueToVoto" sender:self];
+        VotaViewController *votaViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Vota"];
+        votaViewController.delegate = self;
+        votaViewController.candidatos = _candidatoPartido;
+        navController = [[UINavigationController alloc] initWithRootViewController:votaViewController];
     }
+    
+    navController.navigationBar.barTintColor = [UIColor colorWithRed:0.18 green:0.24 blue:0.3 alpha:1];
+    navController.navigationBar.tintColor =[UIColor whiteColor];
 
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
+#pragma mark - Graphs View Controller Delegate
+
+- (void)graphsViewControllerDidRequestBeingClosed:(GraphsViewController *)viewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Vota View Controller Delegate
+- (void)VotaViewControllerDidRequestBeingClosed:(VotaViewController *)viewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
